@@ -1,49 +1,122 @@
+ <html>
+ <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-<header class="header">
-<div class="header_bar row">
 
-<h1 class="grid-6"></h1>
-<a href="/">Notes</a>
-
-<span></span>
-</header>
-<!--  -->
-<body>
   <div class="chat">
     <div class="chat-side">
-     <div class="chat-user clearfix">   </div>
-       <div class="chat-groups"></div>
-         <ul class="chat-groups"></ul>
-  </div>
+     <div class="chat-user clearfix">
+             <h2>Taeko Hamada</h2>
+     <!-- </div> -->
+     <div class="chat-user_actions">
+     <a class="chat-user_action" href="/groups/new">
+       <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+     </a>
+     <a class="chat-user_action" href="/groups/edit">
+      <i class="fa fa-user-o" aria-hidden="true"></i>
+       </i>
+     </a>
+
+    </div><!-- chat-user_actions -->
+   <!-- ::after -->
+   </div><!-- chat-side -->
+
+
+         <ul class="chat-groups">
+             <li class="chat-group">
+               <a class="chat-group_link" href="/groups/6/messages/new"> </a>
+             </li>
+             <p>Taeko / Helena</p>
+             <p>Taeko / Satoko</p>
+             <p>Taeko / Pietro</p>
+         </ul>
+      </div>
+
+
     <div class="chat-main">
      <div class="chat-header clearfix">
-      <div class="chat-header --left">
-        <h2>今日のご飯</h2>
-        <p class="chat-header_users">
-          "members"
-        <span class="chat-header-user">
-        xxxxxxxxxxx nao Taeko Hamada
-        </span>
-        </p>
-    </div>
+
+
+      <div class="chat-header_left">
+        <h3>Taeko / Satoko</h3>
+      </div><!-- chat-header_left -->
+
+      <div class="chat-header_right">
+      <a class="chat-header_edit-btn" href="/groups/6/edit">New Post</a>
+
+      <!-- <a class="chat-header_edit-btn" href="/users/sign_out" method="delete">log-out</a> -->
+      <%= link_to "ログアウト", destroy_user_session_path, method: "delete", class: "chat-header_edit-btn" %>
+      </div><!-- chat-header_right -->
+     </div><!-- chat-header clearfix -->
+
     <div class="chat-body">
-      <ul class="chat-messages">
-          <li class="chat-message" data-message-id="11"> </li>
-     </ul>
-    </div>
+
+        <div class="content-box">
+          <div class="username" type="text">
+             <p>Taeko</p>
+          </div>
+
+        <input class="post-content" type="text">
+        </input>
+         </div><!-- content-box -->
+
+        <div class="content-box">
+          <div class="username" type="text">
+             <p>Taeko</p>
+          </div>
+
+        <input class="post-content" type="text">
+        </input>
+         </div>
+
+        <div class="content-box">
+          <div class="username" type="text">
+             <p>Taeko</p>
+          </div>
+
+        <input class="post-content" type="text">
+        </input>
+         </div>
+
+        <div class="content-box">
+          <div class="username" type="text">
+             <p>Taeko</p>
+          </div>
+
+        <input class="post-content" type="text">
+        </input>
+         </div><!-- content-box -->
+
+                <div class="content-box">
+          <div class="username" type="text">
+             <p>Taeko</p>
+          </div>
+
+        <input class="post-content" type="text">
+        </input>
+         </div><!-- content-box -->
+
+                <div class="content-box">
+          <div class="username" type="text">
+             <p>Taeko</p>
+          </div>
+
+        <input class="post-content" type="text">
+        </input>
+         </div><!-- content-box -->
+
+        <input class="post-content" type="text"> </input>
+        <input class="post-content" type="text"> </input>
+
+
+          <!-- <li class="chat-message" data-message-id="12">iiii</li>
+          <li class="chat-message" data-message-id="13">aaaa</li>
+          <li class="chat-message" data-message-id="14">oooo</li> -->
+    </div><!-- chat-body -->
 
 
 
-      </div>
+      </div><!-- chat-main -->
+     </div><!-- chat -->
      </div>
-    </div>
-   </div>
-  </div>
-
-
-
-
-
-
-</body>
+</html>
 
