@@ -1,4 +1,22 @@
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
+  devise_for :users
+    # devise_for :posts
+
+
+    root  'posts#index'
+    get   'posts'      =>  'posts#index'
+    get   'posts/new'  =>  'posts#new'
+    post  'posts'      =>  'posts#create'
+    delete 'posts/:id' => 'posts#destroy'
+    get   'posts/:id/edit'  => 'posts#edit'
+    patch   'posts/:id'  => 'posts#update'
+    get   'posts/:id'    =>  'posts#show'
+
+
+
+
+    # get   'posts/:id'   =>  'posts#show'    #トップページへのルーティング
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +71,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

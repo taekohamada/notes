@@ -1,13 +1,290 @@
-
-header {
-    padding: 10px;
-    background-color: grey;
-    position: fixed;
-    top: 30px;
-    left: 0;
-    right: 0;
-    z-index: 5;
+html {
+  height: 100%;
 }
+
+body {
+  height: 100%;
+}
+
+
+body {
+margin: 0;
+padding: 0;
+height: 100%;
+
+}
+
+.chat {
+  min-width: 980px;
+  height: 100%;
+}
+
+
+.chat-side{
+  width: 300px;
+  height:100vh;
+  background-color: #2f3e51;
+  float: left;
+
+}
+
+.chat-user {
+  padding: 20px;
+  color: #fff;
+  background-color: #253141
+}
+
+.chat-user h2 {
+  float: left;
+  line-height: 60px;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.chat-user_actions {
+  float:right;
+}
+
+.chat-user_action {
+  display: inline-block;
+  margin: 15px 0 15px 3px;
+  line-height: 28px;
+  color: #fff;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+ display: list-item;
+ text-align: -webkit-match-parent;
+}
+
+.chat-groups p {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.chat-group_link {
+  display: none;
+  padding: 20px, 20px;
+  color: #fff
+}
+
+.chat-group_name {
+ display: inline-block;;
+ font-size: 15px;
+ margin-bottom: 5px;
+}
+
+.chat-group_message {
+  font-size: 11px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.chat-main {
+  float: left;
+  position: relative;
+  width: calc(100% - 300px);
+  height: 100%;
+}
+
+.chat-header {
+  padding-right: 40px;
+  padding-left:  40px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-header_left {
+ float: left;
+}
+.chat-header h3 {
+  margin-top:20px;
+  line-height: 50px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #333
+  font-weight: 400;
+}
+
+.chat-header_right {
+ float: right;
+}
+
+.chat-header_edit-btn {
+display: inline-block;
+margin: 28px 0;
+padding-right: 20px;
+padding-left: 20px;
+line-height: 40px;
+color: #38aef0;
+font-size: 14px;
+border: 2px solid
+}
+
+
+.chat-body {
+  /*position: relative;*/
+  background-color: #F5F5F5;
+  padding-top: 30px;
+  height: calc(100vh - 130px);
+  overflow-y: scroll;
+}
+
+.content-box {
+  /*display: box;*/
+  width: 600px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: : 5px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 200px;
+}
+
+.chat-body input {
+ display: inline-block;
+ /*margin: 10px 10px 10px 200px;*/
+top: 40px;
+left: 30px;
+ width: 460px;
+ height: 120px;
+ padding: 10px;
+ border-color: grey;
+ position:relative;
+
+}
+
+
+
+.username {
+/*
+ color: #14171a;
+ font-size: 14px;
+ font-weight: bold;*/
+ display: inline-block;
+ padding: 10px;
+ margin: auto;
+ width: 50px;
+ height: 20px;
+ border-color: grey;
+ position: absolute;
+}
+
+
+
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*ここからsign_upページ*/
+
+.contents{
+  height: 100%;
+  background-color: #F5F5F5;
+  text-align: center;
+
+}
+
+.contents h2 {
+text-align: center;
+letter-spacing: 1px;
+font-size: 25px;
+padding-top: 100px;
+padding-bottom: 20px;
+}
+
+
+.new_user {
+
+letter-spacing: 1px;
+text-align: center;
+
+}
+
+.new_user input {
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+.contents a {
+  padding: 10px;
+}
+
+/*ここから新規投稿画面*/
+
+.new-content {
+  background-color: #fff;
+  height: 100%;
+}
+
+.body-wrapper {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border: 1px solid;
+  border-color: grey;
+  overflow-y: hidden;
+}
+
+.body-wrapper p {
+  font-size: 16px;
+  margin: 10px;
+  text-align: left;
+}
+.note-box {
+  background-color: blue; /*#777*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  border: 1px solid;
+  border-color: grey;
+  overflow-y: hidden;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
