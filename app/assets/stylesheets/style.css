@@ -239,40 +239,58 @@ text-align: center;
   height: 100%;
 }
 
-.body-wrapper {
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 400px;
-  height: 400px;
-  text-align: center;
-  border: 1px solid;
-  border-color: grey;
-  overflow-y: hidden;
-}
-
 .body-wrapper p {
   font-size: 16px;
   margin: 10px;
   text-align: left;
 }
 .note-box {
-  background-color: blue; /*#777*/
+  background-color: red;/*#fff;*/
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 600px;
-  height: 600px;
+  width: 900px;
+  height: 100%;
   text-align: center;
-  border: 1px solid;
-  border-color: grey;
+/*  border: 1px solid;
+  border-color: grey;*/
+  overflow-y: hidden;
+}
+
+.note-box i {
+  margin-left: 2px;
+
+
+}
+
+.new-content textarea {
+  background-color: brown;/*#fff;*/
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: left;
+  width:600px;
+  border-style: none;
+  margin: 10px;
+
+}
+
+
+.body-wrapper {
+  background-color: blue;/*#fff;*/
+  position: absolute;
+  /*top: 0;*/
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 560px;
+  height: 570px;
+  text-align: center;
+/*  border: 1px solid;
+  border-color: grey;*/
   overflow-y: hidden;
 }
 
