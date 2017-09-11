@@ -147,7 +147,7 @@ border: 2px solid
   width: 600px;
   height: 200px;
   background-color: #ffffff;
-  border-radius: : 5px;
+ /* border-radius: : 5px;*/
   position: relative;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -225,7 +225,7 @@ text-align: center;
 
 .new_user input {
   margin-bottom: 15px;
-  border-radius: 3px;
+  /*border-radius: 3px;*/
 }
 
 .contents a {
