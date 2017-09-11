@@ -1,21 +1,23 @@
 
 <div class="new-content">
- <div class="note-box">
-   <div class="right-box clearfix">
-     <div class="inner-right-box">
-   <a class="content_edit-btn" href="/posts">Post</a>
-   <a class="content_edit-btn" href="/posts">Save as Draft</a>
-   </div>
-  </div>
-  <div class="body-title">
-
-    <textarea name="title" placeholder = "Title"></textarea>
-  </div>
- <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
- <div class="body-wrapper">
-    <textarea class="inner-wrapper" placeholder="Here is the beggining of your world, enjoy!"></textarea>
-
-  </div>
+  <%= form_for('/posts', method: :post, url: '/posts') do |f| %>
+    <div class="note-box">
+      <div class="right-box clearfix">
+        <div class="inner-right-box">
+          <%= f.submit "Post", class: "content_edit-btn" %>
+          <%= f.submit "Save as Draft", class: "content_edit-btn" %>
+        <!--   <%= link_to "Post", posts_path, method: :post, class: "content_edit-btn" %> -->
+          <!-- <a class="content_edit-btn" href="/posts", >Post</a>
+          <a class="content_edit-btn" href="/posts">Save as Draft</a> -->
+        </div>
+      </div>
+      <div class="body-title">
+        <%= f.text_area :name, name: "name", placeholder: "Title" %>
+      </div>
+      <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+      <div class="body-wrapper">
+        <%= f.text_area :text, name: "text",  class: "inner-wrapper", placeholder: "Here is the beggining of your journey...enjoy!" %>
+      </div>
 
 
   <!-- <div class="body-wrapper" id="note-body" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true">
@@ -25,8 +27,8 @@
      </div>
  -->
 
-
- </div>
+    </div>
+  <% end %>
 </div>
 <!--  <div class="chat-body">
 
