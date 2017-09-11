@@ -12,7 +12,9 @@
        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
      </a>
      <a class="chat-user_action" href="/groups/edit">
-      <i class="fa fa-user-o" aria-hidden="true"></i>
+      <i class="fa fa-user-o" aria-hidden="true">
+        <a class="user-icon" href="/users"
+      </i>
        </i>
      </a>
 
@@ -41,7 +43,7 @@
       </div><!-- chat-header_left -->
 
       <div class="chat-header_right">
-      <a class="chat-header_edit-btn" href="/groups/6/edit">New Post</a>
+      <a class="chat-header_edit-btn" href="/posts/new">New Post</a>
 
       <!-- <a class="chat-header_edit-btn" href="/users/sign_out" method="delete">log-out</a> -->
       <%= link_to "ログアウト", destroy_user_session_path, method: "delete", class: "chat-header_edit-btn" %>
