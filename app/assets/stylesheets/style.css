@@ -319,9 +319,23 @@ border: 2px solid
 }
 
 
+.fa-pencil-square-o:before {
+  content: "\f044";
+}
+
+.fa-picture-o:before {
+  content: "\f03e";
+}
 
 
+.fa-user-o:before {
+  content: "\f2c0";
+}
 
+
+.fa-file-text-o:before {
+  content: "\f0f6";
+}
 
 
 
