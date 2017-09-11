@@ -244,8 +244,9 @@ text-align: center;
   margin: 10px;
   text-align: left;
 }
+
 .note-box {
-  background-color: red;/*#fff;*/
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -262,39 +263,59 @@ text-align: center;
 
 .note-box i {
   margin-left: 2px;
-
+  margin-bottom: 40px;
 
 }
 
-.new-content textarea {
-  background-color: brown;/*#fff;*/
-  padding-top: 20px;
+.body-title textarea {
+  background-color: #fff;
+  padding: 20px;
   font-size: 20px;
   text-align: left;
-  width:600px;
+  width:560px;
   border-style: none;
   margin: 10px;
+  color: black;
 
 }
 
 
-.body-wrapper {
-  background-color: blue;/*#fff;*/
-  position: absolute;
-  /*top: 0;*/
-  left: 0;
-  right: 0;
-  bottom: 0;
+.body-wrapper textarea {
+  background-color: #fff;
+  padding: 10px;
   margin: auto;
   width: 560px;
   height: 570px;
-  text-align: center;
-/*  border: 1px solid;
-  border-color: grey;*/
+  border:none;
   overflow-y: hidden;
+  color: #696969;
+
+}
+.right-box {
+  margin-top: 28px;
+  margin-left: auto;
+}
+
+.inner-right-box {
+  float: right;
 }
 
 
+.content_edit-btn {
+display: inline-block;
+padding-right: 20px;
+padding-left: 20px;
+line-height: 40px;
+color: #38aef0;
+font-size: 14px;
+border: 2px solid
+
+}
+
+.fa-2x {
+    font-size: 2em;
+    padding-right: 530px;
+}
 
 
 
