@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
-before_action :move_to_index, except: :index
+before_action :index, except: :index
+
 
   def index
     @posts = Post.includes(:user).order("created_at DESC")
@@ -10,7 +11,8 @@ before_action :move_to_index, except: :index
   end
 
   def create
-    Tweet.create(tweet_params)
+    Post.create(name:post_params[:name], image: post_params[:image], text: post_params[:text], user_id: current_user.id)
+
   end
 
   def destroy

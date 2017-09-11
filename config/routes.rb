@@ -1,6 +1,8 @@
   Rails.application.routes.draw do
   devise_for :users
-    # devise_for :posts
+  resources :posts do
+    # resources :comments, only: [create]
+    end
 
 
     root  'posts#index'
@@ -11,7 +13,7 @@
     get   'posts/:id/edit'  => 'posts#edit'
     patch   'posts/:id'  => 'posts#update'
     get   'posts/:id'    =>  'posts#show'
-
+    get   'users/:id'  => 'users#show'
 
 
 
