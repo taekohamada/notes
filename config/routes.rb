@@ -1,8 +1,10 @@
   Rails.application.routes.draw do
   devise_for :users
-  resources :posts do
+  resources :notes do
+   # resources :posts do
     # resources :comments, only: [create]
-    end
+    # end
+   end
 
 
     root  'posts#index'
