@@ -53,8 +53,8 @@
      <div class="content-box">
       <div class="username" type="text">
         <span class="name">
-         <a href="/users/<%= @post.user.id %>">
-          <span>投稿者</span><%= @post.user.username %>
+         <a href="/users/<%= post.user_id %>">
+          <span>投稿者</span><%= post.user.username %>
          </a>
         </span>
       </div>
@@ -71,6 +71,9 @@
         </li>
         <li>
          <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
+     <div class="post-content">
+       <p><%= post.text %></p>
+     </div>
         </li>
        </ul>
       </div> <!-- more -->

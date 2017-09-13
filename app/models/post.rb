@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
 
   belongs_to :notes
-  has_many :users
+  belongs_to :user
 end
