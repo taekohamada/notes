@@ -4,7 +4,9 @@ before_action :index, except: :index
 
 
   def index
-    @posts = Post.includes(:user).order("created_at DESC")
+    @posts = Post.all
+    @notes = Note.all
+    # includes(:user).order("created_at DESC") ここは後で
   end
 
   def new
@@ -12,7 +14,6 @@ before_action :index, except: :index
 
   def create
     Post.create(name:post_params[:name], image: post_params[:image], text: post_params[:text], user_id: current_user.id)
-
   end
 
   def destroy
@@ -24,7 +25,7 @@ before_action :index, except: :index
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @posts = Post.find(params[:id])
   end
 
   def update
@@ -35,7 +36,8 @@ before_action :index, except: :index
   end
 
   def show
-    @post = Post.find(params[:id])
+    @posts = Post.find(params[:id])
+    @notes = Post.all
     @comments = @post.comments.includes(:user)
   end
 
