@@ -4,16 +4,20 @@ before_action :index, except: :index
 
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
     @notes = Note.all
+    @user_notes = current_user.notes
     # includes(:user).order("created_at DESC") ここは後で
   end
 
   def new
+    @posts = Post.new
+    # @notes = Note.find(params[:format])
   end
 
   def create
-    Post.create(name:post_params[:name], image: post_params[:image], text: post_params[:text], user_id: current_user.id)
+    Post.create(post_params)
+     redirect_to message_note_path(params[:post][:note_id])
   end
 
   def destroy
@@ -26,6 +30,8 @@ before_action :index, except: :index
 
   def edit
     @posts = Post.find(params[:id])
+    binding.pry
+    redirect_to message_note_path(params[:post][:note_id])
   end
 
   def update
@@ -35,15 +41,16 @@ before_action :index, except: :index
      end
   end
 
+
   def show
     @posts = Post.find(params[:id])
-    @notes = Post.all
-    @comments = @post.comments.includes(:user)
+        # @comments = @post.comments.includes(:user)
   end
 
-private
+
+ private
   def post_params
-  params.permit(:name, :image, :text)
+    params.require(:post).permit(:note_id, :name ,:image, :text).merge(user_id: current_user.id)
   end
 
   def move_to_index
@@ -51,4 +58,6 @@ private
   end
 
 
-end
+ end
+
+

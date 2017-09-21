@@ -1,43 +1,35 @@
+<header class="header" >
+
+</header>
 
 <div class="new-content">
-  <%= form_for('/posts', method: :post, url: '/posts') do |f| %>
+  <%= form_for(@posts) do |f| %>
     <div class="note-box">
       <div class="right-box clearfix">
-        <div class="inner-right-box">
-          <%= f.submit "Post", class: "content_edit-btn" %>
-          <%= f.submit "Save as Draft", class: "content_edit-btn" %>
-        <!--   <%= link_to "Post", posts_path, method: :post, class: "content_edit-btn" %> -->
-          <!-- <a class="content_edit-btn" href="/posts", >Post</a>
-          <a class="content_edit-btn" href="/posts">Save as Draft</a> -->
+        <div class="inner-right-box-new">
+          <label style="display: inline">
+            <%= f.file_field :image %>
+            <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+          </label>
+          <%= f.submit "Post your writing", class: "content_edit-btn" %>
         </div>
-      </div>
+      </div> <!-- right box clearfix -->
+
+     <div class="title-and-body">
       <div class="body-title">
-        <%= f.text_area :name, name: "name", placeholder: "Title" %>
+        <%= f.text_area :name, :placeholder => "Title"%>
+        <%= f.hidden_field :note_id, value: params[:format] %>
       </div>
-      <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-      <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
+
+<!--      <form action="update.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="upfile" size="30" value=""> -->
+  </form>
       <div class="body-wrapper">
-        <%= f.text_area :text, name: "text",  class: "inner-wrapper", placeholder: "Here is the beggining of your journey...enjoy!" %>
+        <%= f.text_area :text,  class: "inner-wrapper", :placeholder => "Here is the beggining of your journey, enjoy...!" %>
       </div>
-
-
-  <!-- <div class="body-wrapper" id="note-body" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true">
-  <p>ノート本文<br>
-ここに本文を書き込む </br>
-  </p>
-     </div>
- -->
+    </div>
 
     </div>
   <% end %>
 </div>
-<!--  <div class="chat-body">
 
-        <div class="content-box">
-          <div class="username" type="text">
-             <p>Taeko</p>
-          </div>
-
-        <input class="post-content" type="text">
-        </input>
-         </div> -->

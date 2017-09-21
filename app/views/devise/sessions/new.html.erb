@@ -1,5 +1,8 @@
-<div class="contents row">
-<h2>Log in</h2>
+<header class="header">
+</header>
+ <div class="background-registrations">
+  <div class="contents-row">
+   <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -25,4 +28,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
-</div>
+  </div>
+ </div>
