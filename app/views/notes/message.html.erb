@@ -1,5 +1,5 @@
 <header class="header" >
- <p>Grapho</p>
+ <p>Khôra</p>
 </header>
 
 <div class="chat"> <!-- 全体 -->
@@ -59,6 +59,9 @@
 
    <div class="chat-body">
     <% @posts.each do |post| %>
+           <div class="message-images">
+        <%= image_tag post.image %>
+        </div>
      <div class="content-box">
       <div class="username" type="text">
         <span class="name">
@@ -68,9 +71,9 @@
         </span>
       </div>
      <div class="more">
-       <div class="message-images">
+<!--        <div class="message-images">
         <%= image_tag post.image %>
-        </div>
+        </div> -->
        <ul class="more_list">
         <li>
          <%= link_to 'See more', "/posts/#{post.id}/", method: :get %>

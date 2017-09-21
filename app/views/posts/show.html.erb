@@ -1,14 +1,15 @@
 <header class="header" >
-
+<p>Khôra</p>
 </header>
-<div class="new-content">
+ <div class="new-content">
     <div class="note-box">
       <div class="right-box clearfix">
         <div class="inner-right-box">
-         <li>
-         <%= link_to 'Edit', "/posts/#{@posts.id}/edit", method: :get,  class: "chat-header_edit-btn" %>
-         <%= link_to 'Back', "/message/#{@posts.id}/edit", method: :get,  class: "chat-header_edit-btn" %>
+        <ul style="list-style:none;">
+          <li>
+         <%= link_to 'Edit Your Post', "/posts/#{@posts.id}/edit", method: :get, class: "chat-header_edit-btn" %>
          </li>
+        </ul>
         </div>
       </div>
       <div class="body-title">
@@ -22,4 +23,4 @@
         </div>
 
     </div>
-</div>
+ </div>

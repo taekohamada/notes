@@ -1,12 +1,14 @@
 <div class="new-content">
   <%= form_for(@posts) do |f| %>
   <header class="header" >
+  <p>Khôra</p>
   </header><!-- /header -->
 
   <div class="note-box">
     <div class="note-box-inner">
       <div class="body-title">
         <%= f.text_area :name %>
+        <%= f.hidden_field :note_id, value: "#{@note.id}" %>
       </div>
       <div class="body-wrapper">
         <%= f.text_area :text, class: "inner-wrapper" %>

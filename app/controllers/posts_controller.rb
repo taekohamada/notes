@@ -30,8 +30,7 @@ before_action :index, except: :index
 
   def edit
     @posts = Post.find(params[:id])
-    binding.pry
-    redirect_to message_note_path(params[:post][:note_id])
+    @note = @posts.note
   end
 
   def update
@@ -39,11 +38,14 @@ before_action :index, except: :index
      if post.user_id == current_user.id
         post.update(post_params)
      end
+     redirect_to message_note_path(params[:post][:note_id])
   end
 
 
   def show
     @posts = Post.find(params[:id])
+    # @note = @posts.note
+    # @note = Note.find(params[:id])
         # @comments = @post.comments.includes(:user)
   end
 
