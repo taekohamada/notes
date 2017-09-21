@@ -1,0 +1,18 @@
+<header class="header">
+ </header>
+<div class="background-registrations">
+<div class="contents row">
+ <div class="chatroom-box">
+  <div class="select-chat-user" type="text">
+  <h1>Select your Grapho buddy</h1>
+
+   <%= form_for(@note) do |f| %>
+   <br>
+    <%=f.collection_check_boxes :user_ids, @users, :id, :username, checked: [current_user.id] %>
+   </br>
+    <%= f.submit '決定'  %>
+   <% end %>
+  </div>
+ </div>
+</div>
+</div>

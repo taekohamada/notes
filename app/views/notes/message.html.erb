@@ -1,0 +1,98 @@
+<header class="header" >
+ <p>Grapho</p>
+</header>
+
+<div class="chat"> <!-- 全体 -->
+  <div class="chat-side"> <!-- chat-side 全体 -->
+   <div class="chat-user clearfix"> <!--chat上のユーザー -->
+    <span class="username">
+      <p><%= current_user.username %></p>
+    </span>
+
+    <div class="chat-user_actions"> <!-- font awesome-->
+     <a class="chat-user_action" href="/groups/new">
+     </a>
+     <a class="chat-user_action" href="/groups/edit">
+  <!--     <i class="fa fa-user-o" aria-hidden="true"></i> -->
+     </a>
+    </div> <!-- chat-user_actions -->
+   </div> <!-- chat-user clearfix -->
+
+
+   <ul class="chat-groups">
+        <% @user_notes.each do |note| %>
+              <% note.users.each do |user| %>
+                <%= render partial: "sidebar/group", locals: { user: user, note: note } %>
+              <% end %>
+            <% end %>
+    <li class="chat-group">
+     <a class="chat-group_link" href="/note"> </a>
+      <% @notes.each do |note| %>
+      <div>
+      <a href="/notes/<%= note.id %>"></a>
+      </div>
+
+
+     <% end %> <!-- notes each -->
+    </li>
+   </ul>
+  </div> <!-- chat side -->
+
+  <div class="chat-main">
+   <div class="chat-header clearfix">
+    <p><% @user_notes.each do |note| %>
+              <% note.users.each do |user| %>
+                <%= user.username unless current_user.id == user.id %>
+              <% end %>
+            <% end %>
+        </p>
+    <div class="chat-header_left">
+         <!-- ?? -->
+    </div> <!-- chat-header_left -->
+
+    <div class="chat-header_right">
+      <%= link_to "New Post", new_post_path(@note_id), method: "get", class: "chat-header_edit-btn" %>
+  <!--     <a class="chat-header_edit-btn" href="/posts/new">New Post</a> -->
+       <%= link_to "Log out", destroy_user_session_path, method: "delete", class: "chat-header_edit-btn" %>
+    </div> <!-- chat-header_right -->
+   </div> <!-- chat-header clearfix -->
+
+   <div class="chat-body">
+    <% @posts.each do |post| %>
+     <div class="content-box">
+      <div class="username" type="text">
+        <span class="name">
+         <a href="/users/<%= post.user_id %>">
+          <%= post.user.username %>
+         </a>
+        </span>
+      </div>
+     <div class="more">
+       <div class="message-images">
+        <%= image_tag post.image %>
+        </div>
+       <ul class="more_list">
+        <li>
+         <%= link_to 'See more', "/posts/#{post.id}/", method: :get %>
+          <% if user_signed_in? && current_user.id == post.user_id %>
+          <% end %>
+        </li>
+        <li>
+         <%= link_to 'Edit', "/posts/#{post.id}/edit", method: :get %>
+        </li>
+        <li>
+         <%= link_to 'Delete', "/posts/#{post.id}", method: :delete %>
+        </li>
+       </ul>
+      </div> <!-- more -->
+
+     <div class="post-content">
+       <p><%= post.name %></p>
+     </div>
+     </div> <!-- content-box -->
+    <% end %>
+   </div> <!-- chat-body -->
+  </div> <!-- chat-main -->
+ </div> <!-- chat -->
+
+

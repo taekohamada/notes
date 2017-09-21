@@ -1,22 +1,16 @@
   Rails.application.routes.draw do
+  resources :pictures
   devise_for :users
   resources :notes do
+    get 'message', on: :member
    # resources :posts do
     # resources :comments, only: [create]
     # end
    end
-
+  resources :posts
 
     root  'posts#index'
-    get   'posts'      =>  'posts#index'
-    get   'posts/new'  =>  'posts#new'
-    post  'posts'      =>  'posts#create'
-    delete 'posts/:id' => 'posts#destroy'
-    get   'posts/:id/edit'  => 'posts#edit'
-    patch   'posts/:id'  => 'posts#update'
-    get   'posts/:id'    =>  'posts#show'
     get   'users/:id'  => 'users#show'
-
 
 
     # get   'posts/:id'   =>  'posts#show'    #トップページへのルーティング
