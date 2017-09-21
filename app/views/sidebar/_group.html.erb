@@ -1,0 +1,7 @@
+<ul class="chat-gorups">
+  <li class="chat-group">
+    <%= link_to message_note_path(note), class: "chat-group_link" do %>
+      <%= user.username unless current_user.id == user.id %>
+     <% end %>
+  </li>
+</ul>

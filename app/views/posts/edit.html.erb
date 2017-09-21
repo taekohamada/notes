@@ -1,0 +1,26 @@
+<div class="new-content">
+  <%= form_for(@posts) do |f| %>
+  <header class="header" >
+  </header><!-- /header -->
+
+  <div class="note-box">
+    <div class="note-box-inner">
+      <div class="body-title">
+        <%= f.text_area :name %>
+      </div>
+      <div class="body-wrapper">
+        <%= f.text_area :text, class: "inner-wrapper" %>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner clearfix">
+       <div class="footer-inner-float">
+        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+        <%= f.submit "Update", class: "content_edit-btn" %>
+       </div>
+      </div>
+    </footer>
+  </div>
+  <% end %>
+</div>
