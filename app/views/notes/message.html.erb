@@ -4,18 +4,20 @@
 
 <div class="chat"> <!-- 全体 -->
   <div class="chat-side"> <!-- chat-side 全体 -->
-   <div class="chat-user clearfix"> <!--chat上のユーザー -->
-    <span class="username">
-      <p><%= current_user.username %></p>
-    </span>
-
-    <div class="chat-user_actions"> <!-- font awesome-->
-     <a class="chat-user_action" href="/groups/new">
-     </a>
-     <a class="chat-user_action" href="/groups/edit">
-  <!--     <i class="fa fa-user-o" aria-hidden="true"></i> -->
-     </a>
-    </div> <!-- chat-user_actions -->
+    <div class="chat-user clearfix"> <!--chat上のユーザー -->
+      <span class="username">
+        <p><%= current_user.username %></p>
+      </span>
+      <button class="sidebarBtn">
+       <span></span>
+      </button>
+      <div class="chat-user_actions"> <!-- font awesome-->
+         <a class="chat-user_action" href="/groups/new">
+         </a>
+         <a class="chat-user_action" href="/groups/edit">
+      <!--     <i class="fa fa-user-o" aria-hidden="true"></i> -->
+          </a>
+      </div> <!-- chat-user_actions -->
    </div> <!-- chat-user clearfix -->
 
 
@@ -26,16 +28,29 @@
               <% end %>
             <% end %>
     <li class="chat-group">
-     <a class="chat-group_link" href="/note"> </a>
+        <a class="chat-group_link" href="/note"> </a>
       <% @notes.each do |note| %>
       <div>
-      <a href="/notes/<%= note.id %>"></a>
+        <a href="/notes/<%= note.id %>"></a>
       </div>
-
-
      <% end %> <!-- notes each -->
     </li>
    </ul>
+   <div class="calendar" id="MonthCal"></div><!-- カレンダー -->
+
+    <div class="calendar">
+      <script type="text/javascript">
+       window.onload = googleCalendarSet;
+       function googleCalendarSet(){
+
+      var calendarCode1 = '<iframe class="calendar"src="https://calendar.google.com/calendar/embed?';
+      var calenderCode2 = '/title=Past%20Posts&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=6fjl7iph523l52nnoeurpifehc%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=Asia%2FTokyo" style="border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe>/'
+
+        document.getElementById("MonthCal").innerHTML = calendarCode1+calenderCode2;
+       }
+      </script>
+    </div>
+
   </div> <!-- chat side -->
 
   <div class="chat-main">
@@ -52,7 +67,7 @@
 
     <div class="chat-header_right">
       <%= link_to "New Post", new_post_path(@note_id), method: "get", class: "chat-header_edit-btn" %>
-  <!--     <a class="chat-header_edit-btn" href="/posts/new">New Post</a> -->
+
        <%= link_to "Log out", destroy_user_session_path, method: "delete", class: "chat-header_edit-btn" %>
     </div> <!-- chat-header_right -->
    </div> <!-- chat-header clearfix -->
@@ -97,5 +112,4 @@
    </div> <!-- chat-body -->
   </div> <!-- chat-main -->
  </div> <!-- chat -->
-
 

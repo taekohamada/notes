@@ -10,6 +10,10 @@
         <%= f.text_area :name %>
         <%= f.hidden_field :note_id, value: "#{@note.id}" %>
       </div>
+      <div class="edit-images">
+        <%= image_tag @posts.image %>
+        </div>
+
       <div class="body-wrapper">
         <%= f.text_area :text, class: "inner-wrapper" %>
       </div>

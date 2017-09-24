@@ -3,8 +3,8 @@
 </header>
  <div class="new-content">
     <div class="note-box">
-      <div class="right-box clearfix">
-        <div class="inner-right-box">
+      <div class="edit-button clearfix">
+        <div class="show-right-box">
         <ul style="list-style:none;">
           <li>
          <%= link_to 'Edit Your Post', "/posts/#{@posts.id}/edit", method: :get, class: "chat-header_edit-btn" %>
@@ -12,15 +12,21 @@
         </ul>
         </div>
       </div>
+
       <div class="body-title">
         <div class="show-title">
          <p><%= @posts.name %><p>
         </div>
       </div>
-      <div class="body-wrapper">
-        <div class="show-post">
-          <p><%= @posts.text %></p>
+       <div class="show-images">
+         <%= image_tag @posts.image %>
         </div>
 
+      <div class="body-wrapper">
+
+        <div class="show-post">
+         <br><%= simple_format(@posts.text) %></br>
+        </div>
+      </div>
     </div>
  </div>
