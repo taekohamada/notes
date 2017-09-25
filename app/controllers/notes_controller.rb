@@ -28,6 +28,7 @@ class NotesController < ApplicationController
     @posts = Post.where(note_id: params[:id]).order("created_at DESC")
     @notes = Note.all
     @user_notes = current_user.notes
+    @current_note = Note.find(params[:id])
     @note_id= params[:id]
   end
 
