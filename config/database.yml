@@ -51,4 +51,4 @@ production:
   <<: *default
   database: notes_production
   username: root
-  password: <%= ENV['NOTES_DATABASE_PASSWORD'] %>
+  password:

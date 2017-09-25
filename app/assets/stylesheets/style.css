@@ -19,6 +19,13 @@
   float: right;
 }
 
+.inner-right-box-new img{
+    width: 53px;
+    height: 53px;
+    padding-right: 14px;
+}
+
+
 
 .show-images img {
     width: 771px;
@@ -712,6 +719,11 @@ background-size: cover;
   float: right;
 }
 
+.inner-right-box-new img {
+    width: 53px;
+    height: 53px;
+    padding-right: 14px;
+}
 
 /*ここからsign_up/in ページ */
 
