@@ -91,7 +91,7 @@
         </div> -->
        <ul class="more_list">
         <li>
-         <%= link_to 'Seeeeeee more', "/posts/#{post.id}/", method: :get %>
+         <%= link_to 'See more', "/posts/#{post.id}/", method: :get %>
           <% if user_signed_in? && current_user.id == post.user_id %>
           <% end %>
         </li>
