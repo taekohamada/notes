@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20170919090516) do
     t.text     "image",      limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.integer  "user_id"
     t.integer  "note_id"
+    t.integer  "user_id"
   end
 
   create_table "user_notes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170919090516) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "username"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false
