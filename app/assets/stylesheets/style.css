@@ -571,7 +571,7 @@ border: 2px solid;
   border-style: none;
   margin-bottom: 40px;
   color: black;
-  margin-left: 271px;
+  margin-left: 335px;
   font-size: 20px;
 
 }
@@ -598,6 +598,14 @@ footer {
 }
 
 /*edit page */
+.edit-images img {
+    width: 763px;
+    height: 430px;
+    margin-bottom: 40px;
+    margin-left: 298px
+}
+
+
 .edit-image-button img {
     float: right;
     margin-top: -46px;
@@ -1338,6 +1346,13 @@ li {
 
 
 /*edit page */
+
+.edit-images img {
+    width: 324px;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-left: 24px;
+}
 
 .note-box-inner {
   margin-top: 100px;
