@@ -7,12 +7,13 @@
     <div class="note-box">
       <div class="right-box clearfix">
         <div class="inner-right-box-new">
-          <label style="display: inline">
-            <%= f.file_field :image %>
-         <!--    <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i> -->
-         <%= image_tag "image-button.png" %>
-          </label>
           <%= f.submit "Post your writing", class: "content_edit-btn" %>
+        </div>
+        <div class="image-button">
+            <label style="display: inline">
+              <%= f.file_field :image %>
+              <%= image_tag "button-48px.png" %>
+            </label>
         </div>
       </div> <!-- right box clearfix -->
 

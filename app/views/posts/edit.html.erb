@@ -22,8 +22,13 @@
     <footer>
       <div class="footer-inner clearfix">
        <div class="footer-inner-float">
-        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
         <%= f.submit "Update", class: "content_edit-btn" %>
+         <div class="edit-image-button">
+         <label style="display: inline">
+          <%= f.file_field :image %>
+          <%= image_tag "button-48px.png" %>
+         </label>
+        </div>
        </div>
       </div>
     </footer>

@@ -19,10 +19,9 @@
   float: right;
 }
 
-.inner-right-box-new img{
-    width: 53px;
-    height: 53px;
-    padding-right: 14px;
+.image-button img{
+float:right;
+padding-right: 32px;
 }
 
 
@@ -572,7 +571,7 @@ border: 2px solid;
   border-style: none;
   margin-bottom: 40px;
   color: black;
-  margin-left: 336px;
+  margin-left: 271px;
   font-size: 20px;
 
 }
@@ -589,8 +588,9 @@ footer {
 
 }
 .footer-inner-float {
-  margin-top: 70px;
-  margin-right: 129px;
+ margin-top: 40px;
+ margin-right: 34px;
+
 }
 
 #post_image[type="file"]{
@@ -598,14 +598,14 @@ footer {
 }
 
 /*edit page */
-.edit-images img {
-    width: 771px;
-    height: 430px;
-    margin-bottom: 40px;
-    margin-left: 300px;
+.edit-image-button img {
+    float: right;
+    margin-top: -46px;
 }
 
-
+.footer-inner-float input {
+margin-left: -42px;
+}
 
 
 /*ここからsign_upページ*/
@@ -799,6 +799,14 @@ text-align: center;
 /*/*/
 /*ここから新規投稿画面*/
 
+.image-button img{
+float:right;
+width: 31px;
+height: 31px;
+margin-top: 7px;
+padding-right: 15px;
+}
+
 .new-content {
   background-color: #fff;
   height: 100%;
@@ -846,7 +854,7 @@ text-align: center;
     height: 45px;
     border-style: none;
     color: black;
-    margin-top: 0px;
+    margin-top: 24px;
     margin-bottom: 23px;
     margin-left: 23px;
     font-size: 20px;
@@ -1335,12 +1343,12 @@ li {
   margin-top: 100px;
 }
 
-.edit-images img {
-    width: 327px;
-    height: 200px;
-    margin-bottom: 20px;
-    margin-left: 23px;
+.edit-image-button img {
+    float: right;
+    padding-right: 66px;
+    margin-top: -46px;
 }
+
 
 footer {
   width: 20%;
@@ -1351,7 +1359,7 @@ footer {
 }
 
 .footer-inner-float {
-  margin-top: 10px;
+  margin-top: 26px;
   margin-right: 129px;
 }
 
