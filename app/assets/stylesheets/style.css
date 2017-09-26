@@ -425,11 +425,11 @@ li {
   overflow-y: scroll;
 }
 
-.note-box i {
+/*.note-box i {
   margin-left: 2px;
   margin-bottom: 40px;
   position:relative;
-}
+}*/
 .note-box-inner {
   width: 70%;
   float: left;
@@ -831,11 +831,11 @@ padding-right: 15px;
   overflow-y: scroll;
 }
 
-.note-box i {
+/*.note-box i {
   margin-left: 2px;
   margin-bottom: 40px;
   position:relative;
-}
+}*/
 .note-box-inner {
   width: 70%;
   float: left;
@@ -1363,10 +1363,10 @@ footer {
   margin-right: 129px;
 }
 
-.footer-inner-float i {
+/*.footer-inner-float i {
   margin-bottom: 0;
 }
-
+*/
 .footer-inner-float input {
 margin-left: -42px;
 }
